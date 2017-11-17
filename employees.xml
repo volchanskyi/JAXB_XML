@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="employees.xsd">
+	<employee id="385450">
+		<firstname>John</firstname>
+		<lastname>Muir</lastname>
+		<title>Engineer</title>
+		<hiredate>October 15, 2005</hiredate>
+		<phone>2121234567</phone>
+		<email>john_smith@gmail.com</email>
+	</employee>
+	<employee id="385730">
+		<firstname>Christina</firstname>
+		<lastname>Aguilera</lastname>
+		<title>Manager</title>
+		<hiredate>September 1, 2010</hiredate>
+		<phone>4157654321</phone>
+		<email>christina_johnson_smith@gmail.com</email>
+	</employee>
+</employees>
