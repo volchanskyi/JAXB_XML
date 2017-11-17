@@ -1,0 +1,57 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<xs:element name="employees" type="employeesType"/>
+<xs:complexType name="employeeType">
+<xs:sequence>
+<xs:element name="firstname">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="[A-Z]\w*"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="lastname">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="[A-Z]\w*"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="title">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:enumeration value="Engineer"/>
+<xs:enumeration value="Manager"/>
+<xs:enumeration value="QA"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="hiredate">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="([ADFJMNOS]\w*\s)([0-9]{1,2},)\s([0-9]{4})"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="phone">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="\d{10}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="email">
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value=".+\@.+\..{2,18}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:element>
+</xs:sequence>
+<xs:attribute type="xs:string" name="id" use="required"/>
+</xs:complexType>
+<xs:complexType name="employeesType">
+<xs:sequence>
+<xs:element type="employeeType" name="employee" maxOccurs="unbounded" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
